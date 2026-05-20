@@ -27,7 +27,7 @@ namespace pryCarrionAcademia
             frmRegistro frmRegistro = new frmRegistro();
             frmPlan frmPlan = new frmPlan();
             this.Hide();
-            frmPlan.ShowDialog();  
+            frmRegistro.ShowDialog();  
             this.Close();
         }
     }
