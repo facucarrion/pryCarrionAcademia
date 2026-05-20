@@ -10,24 +10,21 @@ using System.Windows.Forms;
 
 namespace pryCarrionAcademia
 {
-    public partial class frmInicio : Form
+    public partial class frmRegistro : Form
     {
-        public frmInicio()
+        public frmRegistro()
         {
             InitializeComponent();
         }
 
-        private void frmInicio_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnIniciar_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            frmRegistro frmRegistro = new frmRegistro();
-            this.Hide();
-            frmRegistro.ShowDialog();  
-            this.Close();
+
         }
     }
 }
