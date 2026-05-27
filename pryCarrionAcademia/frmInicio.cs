@@ -25,9 +25,16 @@ namespace pryCarrionAcademia
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             frmRegistro frmRegistro = new frmRegistro();
-            frmPlan frmPlan = new frmPlan();
             this.Hide();
             frmRegistro.ShowDialog();  
+            this.Close();
+        }
+
+        private void btnAlumnos_Click(object sender, EventArgs e)
+        {
+            frmAlumno frmAlumno = new frmAlumno();  
+            this.Hide();
+            frmAlumno.ShowDialog();
             this.Close();
         }
     }

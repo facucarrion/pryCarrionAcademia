@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnIniciar = new System.Windows.Forms.Button();
+            this.btnMaterias = new System.Windows.Forms.Button();
             this.lblInicio = new System.Windows.Forms.Label();
+            this.btnAlumnos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnIniciar
+            // btnMaterias
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(12, 175);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(241, 38);
-            this.btnIniciar.TabIndex = 0;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            this.btnMaterias.Location = new System.Drawing.Point(12, 103);
+            this.btnMaterias.Name = "btnMaterias";
+            this.btnMaterias.Size = new System.Drawing.Size(241, 38);
+            this.btnMaterias.TabIndex = 0;
+            this.btnMaterias.Text = "Materias";
+            this.btnMaterias.UseVisualStyleBackColor = true;
+            this.btnMaterias.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // lblInicio
             // 
@@ -52,13 +53,24 @@
             this.lblInicio.TabIndex = 1;
             this.lblInicio.Text = "BIENVENIDO";
             // 
+            // btnAlumnos
+            // 
+            this.btnAlumnos.Location = new System.Drawing.Point(12, 147);
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Size = new System.Drawing.Size(241, 38);
+            this.btnAlumnos.TabIndex = 2;
+            this.btnAlumnos.Text = "Alumnos";
+            this.btnAlumnos.UseVisualStyleBackColor = true;
+            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 219);
+            this.ClientSize = new System.Drawing.Size(265, 195);
+            this.Controls.Add(this.btnAlumnos);
             this.Controls.Add(this.lblInicio);
-            this.Controls.Add(this.btnIniciar);
+            this.Controls.Add(this.btnMaterias);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
@@ -70,8 +82,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.Button btnMaterias;
         private System.Windows.Forms.Label lblInicio;
+        private System.Windows.Forms.Button btnAlumnos;
     }
 }
 

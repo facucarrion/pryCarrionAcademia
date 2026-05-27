@@ -33,6 +33,7 @@
             this.lblPlan = new System.Windows.Forms.Label();
             this.lblActivo = new System.Windows.Forms.Label();
             this.gbRegistro = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.chkActivo = new System.Windows.Forms.CheckBox();
             this.lstPlan = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@
             this.btnListado = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.gbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,16 @@
             this.gbRegistro.TabStop = false;
             this.gbRegistro.Text = "Registro Materia/Asignatura";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(75, 127);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(215, 24);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Registrar Planes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // chkActivo
             // 
             this.chkActivo.AutoSize = true;
@@ -112,11 +122,8 @@
             // 
             // lstPlan
             // 
+            this.lstPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstPlan.FormattingEnabled = true;
-            this.lstPlan.Items.AddRange(new object[] {
-            "Plan 1",
-            "Plan 2",
-            "Plan 3"});
             this.lstPlan.Location = new System.Drawing.Point(75, 100);
             this.lstPlan.Name = "lstPlan";
             this.lstPlan.Size = new System.Drawing.Size(215, 21);
@@ -132,6 +139,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(75, 28);
+            this.txtCodigo.Mask = "0000";
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(215, 20);
             this.txtCodigo.TabIndex = 4;
@@ -165,16 +173,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(75, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 24);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Registrar Planes";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +185,7 @@
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.gbRegistro.ResumeLayout(false);
             this.gbRegistro.PerformLayout();
             this.ResumeLayout(false);

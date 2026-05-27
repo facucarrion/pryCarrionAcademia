@@ -12,12 +12,12 @@ namespace pryCarrionAcademia
 {
     public partial class frmPlan : Form
     {
-        string[] planes = new string[5];
         int varIndice = 0;
-
-        public frmPlan()
+        public string[] arrPlanes = new string[3];
+        public frmPlan(string[] arrPlanesRecibido)
         {
             InitializeComponent();
+            arrPlanes = arrPlanesRecibido;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -27,13 +27,13 @@ namespace pryCarrionAcademia
                 MessageBox.Show("Por favor, ingrese un plan válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (varIndice >= planes.Length)
+            if (varIndice >= arrPlanes.Length)
             {
                 MessageBox.Show("Se ha alcanzado el límite de planes registrados.", "Límite alcanzado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            planes[varIndice] = txtPlan.Text;
+            
+            arrPlanes[varIndice] = txtPlan.Text;
             txtPlan.Clear();
             varIndice++;
         }
@@ -46,11 +46,11 @@ namespace pryCarrionAcademia
         private void btnListar_Click(object sender, EventArgs e)
         {
             string planesRegistrados = "Planes registrados:\n";
-            for (int i = 0; i < planes.Length; i++)
+            for (int i = 0; i < arrPlanes.Length; i++)
             {
-                if (planes[i] != null)
+                if (arrPlanes[i] != null)
                 {
-                    planesRegistrados += $"{i + 1}. {planes[i]}\n";
+                    planesRegistrados += $"{i + 1}. {arrPlanes[i]}\n";
                 }
             }
             MessageBox.Show(planesRegistrados, "Listado de Planes", MessageBoxButtons.OK, MessageBoxIcon.Information);

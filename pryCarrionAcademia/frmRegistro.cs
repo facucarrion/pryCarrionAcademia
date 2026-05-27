@@ -14,6 +14,7 @@ namespace pryCarrionAcademia
     public partial class frmRegistro : Form
     {
         string[,] arrMaterias = new string[2, 4];
+        string[] arrPlanes = new string[3];
         int indiceFila = 0;
 
         public frmRegistro()
@@ -78,21 +79,25 @@ namespace pryCarrionAcademia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPlan frmPlan = new frmPlan();
+            frmPlan frmPlan = new frmPlan(arrPlanes);
+            frmPlan.arrPlanes = arrPlanes;
             frmPlan.ShowDialog();
+
+            lstPlan.DataSource = null;
+            lstPlan.DataSource = arrPlanes;
         }
 
         private void btnListado_Click(object sender, EventArgs e)
         {
-            string mensaje = "";
+            frmListadoMaterias frmListadoMaterias = new frmListadoMaterias(arrPlanes);
+            frmListadoMaterias.arrMateriasListado = arrMaterias;
 
-            for (int fila = 0; fila < arrMaterias.GetLength(0); fila++)
-            {
-                mensaje += $"{arrMaterias[fila, 0]} - {arrMaterias[fila, 1]}" + "\n";
-                mensaje += $"- Plan: {arrMaterias[fila, 2]}" + "\n" + $"- {arrMaterias[fila, 3]} \n";
-            }
+            frmListadoMaterias.ShowDialog();
+        }
 
-            MessageBox.Show(mensaje, "Materias Registradas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void frmRegistro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
